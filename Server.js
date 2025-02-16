@@ -17,9 +17,9 @@ app.use(express.json());
 // Routes
 app.use("/api/items", itemRoutes);
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-})
+app.get('/home', (req, res) => {
+    res.status(200).json('Welcome, your app is working well');
+  });
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
