@@ -17,6 +17,10 @@ app.use(express.json());
 // Routes
 app.use("/api/items", itemRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Hello World!");
+})
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
